@@ -1,44 +1,41 @@
-/* ---------------------------
-   GLOBAL
----------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg: #F4EFE9;        /* 샌드 베이지 */
+  --bg: #F4EFE9;
   --bg-light: #FBF9F6;
-  --text-main: #3B302A; /* 브라운 계열 */
-  --text-soft: #6D625B; 
-  --accent: #C9B9A3; 
+  --text-main: #3B302A;
+  --text-soft: #6D625B;
+  --accent: #C9B9A3;
+  --accent-deep: #A48B74;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Pretendard', sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 body {
   background: var(--bg-light);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* ---------------------------
-   HEADER
----------------------------- */
+/* HEADER */
 header {
   width: 100%;
   padding: 18px 0;
   position: fixed;
   top: 0;
   left: 0;
-  background: var(--bg-light);
+  background: rgba(251, 249, 246, 0.96);
   border-bottom: 1px solid #ddd1c480;
   z-index: 100;
+  backdrop-filter: blur(8px);
 }
 
-header .inner {
+.inner {
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -52,6 +49,7 @@ header .inner {
 .logo {
   font-size: 22px;
   font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--text-main);
 }
 
@@ -59,8 +57,7 @@ nav a {
   margin-left: 20px;
   text-decoration: none;
   color: var(--text-main);
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 14px;
   opacity: 0.8;
 }
 
@@ -68,159 +65,242 @@ nav a:hover {
   opacity: 1;
 }
 
-/* ---------------------------
-   HERO
----------------------------- */
+/* HERO */
 .hero {
-  width: 100%;
-  height: 84vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  padding: 120px 20px 80px;
+  background: radial-gradient(circle at top left, #F8F2EA 0, #F4EFE9 40%, #EBE3DA 100%);
+}
 
-  padding-top: 80px;
-  background: var(--bg);
+.hero-box {
+  max-width: 640px;
+  padding: 32px 28px;
+  background: rgba(254, 252, 249, 0.96);
+  border-radius: 24px;
+  border: 1px solid #e1d3c8;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.hero-label {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 10px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 12px;
-  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 14px;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  opacity: 0.8;
+.hero-text {
+  font-size: 14px;
+  color: var(--text-soft);
 }
 
-/* ---------------------------
-   SECTION WRAPPER
----------------------------- */
+.hero-actions {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: var(--text-main);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--accent-deep);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--text-main);
+  border-color: var(--accent);
+}
+
+.btn.ghost:hover {
+  background: rgba(0,0,0,0.03);
+}
+
+/* SECTIONS */
 section {
   padding: 80px 0;
 }
 
 .section-inner {
-  width: 100%;
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
 }
 
+.section-inner.narrow {
+  max-width: 720px;
+}
+
 .section-title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 14px;
-  color: var(--text-main);
+  margin-bottom: 8px;
 }
 
 .section-sub {
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-soft);
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
-/* ---------------------------
-   SERVICES
----------------------------- */
+/* ABOUT */
+.about-text {
+  font-size: 14px;
+  color: var(--text-main);
+  text-align: center;
+}
+
+/* SERVICES */
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
 }
 
 .service-box {
-  padding: 24px;
+  padding: 22px 20px;
   background: var(--bg);
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid #e1d3c8;
-  text-align: center;
 }
 
 .service-box h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 17px;
+  margin-bottom: 8px;
 }
 
 .service-box p {
-  font-size: 14px;
-  opacity: 0.8;
+  font-size: 13px;
+  color: var(--text-soft);
 }
 
-/* ---------------------------
-   PORTFOLIO (Instagram)
----------------------------- */
+/* PORTFOLIO */
 .portfolio-grid {
   display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .portfolio-item {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background: #EDE9E4;
-  border-radius: 12px;
-  overflow: hidden;
   position: relative;
-}
-
-.portfolio-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Hover */
-.portfolio-item:hover img {
-  filter: brightness(0.75);
-  transition: 0.25s;
-}
-
-/* ---------------------------
-   CONTACT
----------------------------- */
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.contact-links a {
-  padding: 10px 18px;
-  background: var(--text-main);
-  color: white;
-  border-radius: 30px;
-  font-size: 14px;
+  border-radius: 18px;
+  padding: 16px;
+  color: #fff;
   text-decoration: none;
-  opacity: 0.95;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 200px;
 }
 
-.contact-links a:hover {
+.portfolio-item .tag {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.portfolio-item .title {
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+/* 가짜 썸네일용 그라데이션 (나중에 background-image로 교체 가능) */
+.p1 { background: linear-gradient(135deg, #B99A84, #E5C9B3); }
+.p2 { background: linear-gradient(135deg, #C3A68F, #F0D6C3); }
+.p3 { background: linear-gradient(135deg, #9C8376, #D9B6A0); }
+.p4 { background: linear-gradient(135deg, #B6A49B, #E2D0C7); }
+.p5 { background: linear-gradient(135deg, #A88C78, #E1BEA7); }
+.p6 { background: linear-gradient(135deg, #917B70, #D6B6A3); }
+
+.portfolio-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.2), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.portfolio-item:hover::after {
   opacity: 1;
 }
 
-/* ---------------------------
-   FOOTER
----------------------------- */
-footer {
-  background: var(--bg);
-  padding: 40px 0;
-  margin-top: 40px;
-  text-align: center;
-  color: var(--text-soft);
-  font-size: 14px;
+/* CONTACT */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
 }
 
-/* ---------------------------
-   RESPONSIVE
----------------------------- */
-@media (max-width: 640px) {
+.contact-links a {
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: var(--text-main);
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  background: var(--accent-deep);
+}
+
+/* FOOTER */
+footer {
+  background: var(--bg);
+  padding: 34px 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-box {
+    padding: 24px 20px;
+  }
+
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 26px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin-left: 12px;
+    font-size: 13px;
   }
 }
