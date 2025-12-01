@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Lusse Design | 루세디자인</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,18 +14,44 @@
     <div class="inner">
       <div class="logo">LUSSE DESIGN</div>
       <nav>
-        <a href="#services">서비스</a>
-        <a href="#portfolio">포트폴리오</a>
-        <a href="#contact">문의</a>
+        <a href="#about" class="nav-link">소개</a>
+        <a href="#services" class="nav-link">서비스</a>
+        <a href="#portfolio" class="nav-link">포트폴리오</a>
+        <a href="#contact" class="nav-link">문의</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div>
-      <h1>Branding & Aesthetic</h1>
-      <p>감각적인 디자인으로 가치를 만드는 스튜디오, 루세디자인</p>
+    <div class="hero-box">
+      <p class="hero-label">BRANDING & GRAPHIC STUDIO</p>
+      <h1>감각적인 디자인으로<br>브랜드의 결을 채우다.</h1>
+      <p class="hero-text">
+        루세디자인은 따뜻한 무드와 정돈된 레이아웃으로<br>
+        브랜드가 가진 이야기를 시각적으로 풀어내는 디자인 스튜디오입니다.
+      </p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn primary nav-link">포트폴리오 보기</a>
+        <a href="#contact" class="btn ghost nav-link">문의하기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner narrow">
+      <h2 class="section-title">About Lusse Design</h2>
+      <p class="section-sub">
+        루세디자인은 브랜드의 첫인상부터 세부 요소까지,
+        전체적인 무드와 결을 맞추는 것을 가장 중요하게 생각합니다.
+      </p>
+      <p class="about-text">
+        단순히 예쁜 결과물을 만드는 것에서 끝나지 않고,<br>
+        브랜드가 어떤 사람들에게, 어떤 톤으로 말을 거는지 함께 고민합니다.<br>
+        작은 디테일이 전체 인상을 바꾼다고 믿기에,
+        타이포그래피 · 컬러 · 여백 하나까지 꼼꼼하게 살핍니다.
+      </p>
     </div>
   </section>
 
@@ -34,24 +59,24 @@
   <section id="services">
     <div class="section-inner">
       <h2 class="section-title">서비스</h2>
-      <p class="section-sub">브랜딩부터 패키지 디자인까지</p>
+      <p class="section-sub">브랜딩부터 패키지 디자인까지, 한 톤으로 연결합니다.</p>
 
       <div class="services">
         <div class="service-box">
-          <h3>Branding</h3>
-          <p>브랜드 전략 · 브랜드 디자인</p>
+          <h3>Brand Identity</h3>
+          <p>로고 · 심볼 · 서브마크 · 브랜드 키 비주얼 등 브랜드의 얼굴을 설계합니다.</p>
         </div>
         <div class="service-box">
           <h3>Graphic Design</h3>
-          <p>전단지 · 포스터 · 홍보물</p>
+          <p>카드뉴스, 리플렛, 포스터, 온라인·오프라인 홍보물 디자인을 진행합니다.</p>
         </div>
         <div class="service-box">
-          <h3>Package</h3>
-          <p>패키지 기획 및 디자인</p>
+          <h3>Package Design</h3>
+          <p>제품 특성과 타깃에 맞는 패키지 구조 · 라벨 디자인을 제안합니다.</p>
         </div>
         <div class="service-box">
-          <h3>Logo Design</h3>
-          <p>시그니처 로고 제작</p>
+          <h3>Brand Collateral</h3>
+          <p>명함, 스티커, 굿즈 등 브랜드를 확장시키는 요소들을 함께 구성합니다.</p>
         </div>
       </div>
     </div>
@@ -61,24 +86,50 @@
   <section id="portfolio">
     <div class="section-inner">
       <h2 class="section-title">포트폴리오</h2>
-      <p class="section-sub">@lusse_archive 인스타그램 최신 작업</p>
+      <p class="section-sub">실제 작업물은 인스타그램 @lusse_archive에서 더 보실 수 있어요.</p>
 
       <div class="portfolio-grid">
-        <!-- JS로 자동 삽입됨 -->
+        <!-- 실제 이미지는 나중에 교체 가능 -->
+        <a href="https://instagram.com/lusse_archive" target="_blank" class="portfolio-item p1">
+          <span class="tag">Branding</span>
+          <span class="title">Coffee Studio Identity</span>
+        </a>
+        <a href="https://instagram.com/lusse_archive" target="_blank" class="portfolio-item p2">
+          <span class="tag">Package</span>
+          <span class="title">Dessert Package Design</span>
+        </a>
+        <a href="https://instagram.com/lusse_archive" target="_blank" class="portfolio-item p3">
+          <span class="tag">Graphic</span>
+          <span class="title">Seasonal Poster</span>
+        </a>
+        <a href="https://instagram.com/lusse_archive" target="_blank" class="portfolio-item p4">
+          <span class="tag">Logo</span>
+          <span class="title">Signature Logo Mark</span>
+        </a>
+        <a href="https://instagram.com/lusse_archive" target="_blank" class="portfolio-item p5">
+          <span class="tag">Branding</span>
+          <span class="title">Lifestyle Brand Kit</span>
+        </a>
+        <a href="https://instagram.com/lusse_archive" target="_blank" class="portfolio-item p6">
+          <span class="tag">Graphic</span>
+          <span class="title">SNS Feed Design</span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="section-inner">
+    <div class="section-inner narrow">
       <h2 class="section-title">문의</h2>
-      <p class="section-sub">협업 · 디자인 의뢰</p>
+      <p class="section-sub">
+        작업 내용과 일정, 예산 범위를 함께 보내주시면 더욱 빠르게 도와드릴 수 있습니다.
+      </p>
 
       <div class="contact-links">
-        <a href="https://instagram.com/lusse_archive" target="_blank">Instagram</a>
-        <a href="mailto:lusse@example.com">Email</a>
-        <a href="https://pf.kakao.com/" target="_blank">KakaoTalk</a>
+        <a href="https://instagram.com/lusse_archive" target="_blank">Instagram DM</a>
+        <a href="mailto:lusse@example.com">E-mail</a>
+        <a href="https://pf.kakao.com" target="_blank">KakaoTalk 채널</a>
       </div>
     </div>
   </section>
