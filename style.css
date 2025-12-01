@@ -1,0 +1,226 @@
+/* ---------------------------
+   GLOBAL
+---------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #F4EFE9;        /* 샌드 베이지 */
+  --bg-light: #FBF9F6;
+  --text-main: #3B302A; /* 브라운 계열 */
+  --text-soft: #6D625B; 
+  --accent: #C9B9A3; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard', sans-serif;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ---------------------------
+   HEADER
+---------------------------- */
+header {
+  width: 100%;
+  padding: 18px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--bg-light);
+  border-bottom: 1px solid #ddd1c480;
+  z-index: 100;
+}
+
+header .inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* ---------------------------
+   HERO
+---------------------------- */
+.hero {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding-top: 80px;
+  background: var(--bg);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* ---------------------------
+   SECTION WRAPPER
+---------------------------- */
+section {
+  padding: 80px 0;
+}
+
+.section-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 14px;
+  color: var(--text-main);
+}
+
+.section-sub {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-soft);
+  margin-bottom: 40px;
+}
+
+/* ---------------------------
+   SERVICES
+---------------------------- */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 24px;
+}
+
+.service-box {
+  padding: 24px;
+  background: var(--bg);
+  border-radius: 14px;
+  border: 1px solid #e1d3c8;
+  text-align: center;
+}
+
+.service-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ---------------------------
+   PORTFOLIO (Instagram)
+---------------------------- */
+.portfolio-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.portfolio-item {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #EDE9E4;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover */
+.portfolio-item:hover img {
+  filter: brightness(0.75);
+  transition: 0.25s;
+}
+
+/* ---------------------------
+   CONTACT
+---------------------------- */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.contact-links a {
+  padding: 10px 18px;
+  background: var(--text-main);
+  color: white;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0.95;
+}
+
+.contact-links a:hover {
+  opacity: 1;
+}
+
+/* ---------------------------
+   FOOTER
+---------------------------- */
+footer {
+  background: var(--bg);
+  padding: 40px 0;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+/* ---------------------------
+   RESPONSIVE
+---------------------------- */
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
